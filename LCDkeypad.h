@@ -13,9 +13,11 @@
 
 class LCDkeypad : public LiquidCrystal {
   public:
-    LCDkeypad();  // Constructor without pins
+    LCDkeypad();
     int read();
-  void part(const char* text, int cur);  // Method to read button states
+    void part(String text, int cur,bool ex);
+    void makeChars();
+    void select(String data[],String title,int cur);
 
   private:
     int _adc_key_in;
