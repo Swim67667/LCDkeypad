@@ -1,6 +1,5 @@
 #include <LCDkeypad.h>
 
-// Initialize the LCDkeypad (pins are hardcoded, so no arguments needed)
 LCDkeypad lcd;
 
 void setup() {
@@ -9,11 +8,9 @@ void setup() {
 }
 
 void loop() {
-  int button = lcd.readButtons();  // Read the button state
+  int button = lcd.readButtons();
 
   lcd.setCursor(0, 1);
-    // Move to the second row
-
   switch(button) {
     case btnRIGHT:
       lcd.print("RIGHT ");
