@@ -14,12 +14,12 @@ void loop() {
   // Example usage
 if(lcd.read()==btnUP && curline>0){
   curline-=1;
-  
+
 }
 if(lcd.read()==btnDOWN){
   curline+=1;
 }
 
- lcd.part("hello this is a really long string that should be partitiond.",curline);
+ lcd.part("hello this is a really long string that should be partitiond.",curline,0);
  delay(300);
 }
